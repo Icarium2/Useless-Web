@@ -38,9 +38,16 @@ canvas.addEventListener("mousedown", (e) => {
   pathX = e.offsetX;
   pathY = e.offsetY;
 });
+canvas.addEventListener("touchstart", (e) => {
+  drawing = true;
+  pathX = e.offsetX;
+  pathY = e.offsetY;
+});
 
 //The event-listeners that I need to draw(-and stop drawing) on the canvas(including the mousedown-one above)
 canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("touchmove", draw);
+canvas.addEventListener("touchend", () => (drawing = false));
 canvas.addEventListener("mouseup", () => (drawing = false));
 canvas.addEventListener("mouseout", () => (drawing = false));
 

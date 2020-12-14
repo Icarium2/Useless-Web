@@ -16,7 +16,6 @@ body {
   font-family: "Bangers", cursive;
 }
 header {
-  margin-bottom: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +40,7 @@ header h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2vh;
+  margin-top: 30px;
 }
 
 .submit {
@@ -66,5 +65,14 @@ header h3 {
   }
   header h3 {
     font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header h1 {
+    font-size: 30px;
+  }
+  header h3 {
+    font-size: 16px;
   }
 }
