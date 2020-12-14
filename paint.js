@@ -33,23 +33,16 @@ function draw(e) {
   pathY = e.offsetY; //Updates so that the line doesn't always start from 0 on its axis
 }
 //Sets mousedown to drawing and tells the canvas to update when I've let go of the line once, so it doesn't draw one continuous line
-canvas.addEventListener("mousedown", (e) => {
-  drawing = true;
-  pathX = e.offsetX;
-  pathY = e.offsetY;
-});
-canvas.addEventListener("touchstart", (e) => {
+canvas.addEventListener("mousedown", "touchstart", (e) => {
   drawing = true;
   pathX = e.offsetX;
   pathY = e.offsetY;
 });
 
 //The event-listeners that I need to draw(-and stop drawing) on the canvas(including the mousedown-one above)
-canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("mousemove", "touchmove", draw);
 canvas.addEventListener("mouseup", () => (drawing = false));
-canvas.addEventListener("mouseout", () => (drawing = false));
-canvas.addEventListener("touchmove", draw);
-canvas.addEventListener("touchend", () => (drawing = false));
+canvas.addEventListener("mouseout", "touchend", () => (drawing = false));
 
 // Prevent scrolling when touching the canvas
 document.body.addEventListener(
