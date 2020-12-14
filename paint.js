@@ -46,10 +46,39 @@ canvas.addEventListener("touchstart", (e) => {
 
 //The event-listeners that I need to draw(-and stop drawing) on the canvas(including the mousedown-one above)
 canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("touchmove", draw);
-canvas.addEventListener("touchend", () => (drawing = false));
 canvas.addEventListener("mouseup", () => (drawing = false));
 canvas.addEventListener("mouseout", () => (drawing = false));
+canvas.addEventListener("touchmove", draw);
+canvas.addEventListener("touchend", () => (drawing = false));
+
+// Prevent scrolling when touching the canvas
+document.body.addEventListener(
+  "touchstart",
+  function (e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  },
+  false
+);
+document.body.addEventListener(
+  "touchend",
+  function (e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  },
+  false
+);
+document.body.addEventListener(
+  "touchmove",
+  function (e) {
+    if (e.target == canvas) {
+      e.preventDefault();
+    }
+  },
+  false
+);
 
 //Checks if the canvas element's drawable environment is properly sized, if not it updates it to match the current css settings rather than the default canvas w/h of 300px
 function resizeCanvas(canvas) {
