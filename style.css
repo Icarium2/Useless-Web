@@ -1,5 +1,6 @@
 :root {
   --main-stroke-color: whitesmoke;
+  --main-font-family: "Bangers", cursive;
 }
 body {
   margin: 0;
@@ -13,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: "Bangers", cursive;
+  font-family: var(--main-font-family);
 }
 header {
   display: flex;
