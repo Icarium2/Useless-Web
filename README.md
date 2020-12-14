@@ -1,4 +1,4 @@
-# Useless-Web
+# Snarky art-critic
 School-project for Yrgo/WU20
 
 For this project I decided to create a canvas where the user can sketch drawings, and to add a button where you could submit the drawing for a professional review. 
