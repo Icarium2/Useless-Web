@@ -1,4 +1,4 @@
-#paint {
+#sketch {
   border: 5px solid rgb(25, 31, 26);
   margin-top: 3px;
   width: 350px;
@@ -8,19 +8,19 @@
 }
 
 @media only screen and (min-width: 768px) {
-  #paint {
+  #sketch {
     height: 600px;
     width: 600px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  #paint {
+  #sketch {
     width: 900px;
     height: 600px;
   }
 }
 @media only screen and (max-width: 400px) {
-  #paint {
+  #sketch {
     height: 300px;
     width: 300px;
     margin-top: 2vh;
