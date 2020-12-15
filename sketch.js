@@ -44,7 +44,7 @@ canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => (drawing = false));
 canvas.addEventListener("mouseout", () => (drawing = false));
 
-/* Can't get it to work. Any ideas? :-(
+/* My greatest failure :-(
 
 canvas.addEventListener("touchstart", (e) => {
   drawing = true;
